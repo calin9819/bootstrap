@@ -1,5 +1,5 @@
 <!DOCTYPE <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <title>Page Title</title>
@@ -9,33 +9,341 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
-<body>
 
-    <div class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                      </li>    
-                    </ul>
-                  </div>  
-    </div>
+<style>
+  .custom-toggler .navbar-toggler {
+    border-color: white;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("Images/toggler.png");
+}
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6 btn-danger">Danger</div>
-            <div class="col-sm-6 btn-warning">Warning</div>
+.custom-button {
+  border-radius: 50px; 
+  padding: 5px 30px;                   
+  color: white;
+}
+
+#container-shadow {
+  border-radius: 5px;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+#text-principal {
+    padding-top : 20px;
+}
+
+#prima-coloana {
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+#login {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#login-button {
+  border-radius: 50px; 
+  padding: 3px 45px;
+  float: right;
+}
+
+#forgot-password {
+  float: right;
+}
+
+#img1  {
+    content: url('Images/mcafee.png');
+  }
+  #img2  {
+    content: url('Images/secured.png');
+  }
+  #img3  {
+    content: url('Images/authorize.png');
+  }
+  #img4  {
+    content: url('Images/authorized.png');
+  }
+  #img5  {
+    content: url('Images/bbb.png');
+  }
+
+.mic {
+  font-size: 0.7rem;
+  padding: 5px;
+  text-align: center;
+  color: rgb(22,53,108);
+}
+
+#copyright {
+  text-align: right;
+}
+
+#container-mare {
+  margin-top: 1.5rem;
+}
+
+#text-principal {
+  font-size: 1.5rem;
+}
+
+#text-login {
+  font-size: 1.3rem;
+}
+
+.label {
+  width: 100%; 
+  position: relative; 
+  top: 13px; 
+  left: 10px;
+  font-size: 0.75rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  #prima-coloana {
+    background-color: rgb(240, 240, 240);
+    padding-top: 20px;
+    margin-bottom: 0;
+  }
+
+  #a-doua-coloana {
+    background-color: rgb(240, 240, 240);
+  }
+
+  #a-treia-coloana {
+    background-color: rgb(240, 240, 240);
+  }
+
+  #container-shadow {
+    box-shadow: none;
+    border-radius: 0;
+    background-color: rgb(240, 240, 240);
+  }
+
+  #row {
+    background-color: rgb(240, 240, 240);
+
+  }
+
+  #login {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  #coloana-login {
+    padding: 0;
+  }
+
+  #forgot-password{
+    float: left;
+  }
+
+  #last-column1 {
+    background-color: rgb(240, 240, 240);
+  }
+  #last-column2 {
+    background-color: rgb(240, 240, 240);
+  }
+
+  #img1  {
+    content: url('Images/mcafee-gray.png');
+  }
+  #img2  {
+    content: url('Images/secured-gray.png');
+  }
+  #img3  {
+    content: url('Images/authorize-gray.png');
+  }
+  #img4  {
+    content: url('Images/authorized-gray.png');
+  }
+  #img5  {
+    content: url('Images/bbb-gray.png');
+  }
+
+  #copyright {
+  text-align: center;
+  } 
+
+  #container-mare {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #forgot-password {
+    width: 100%;
+    text-align: right;
+  }
+}
+
+</style>
+
+
+<body style="background-color: rgb(208,206,208); max-width: 100%;">
+  <div class="container shadow-sm mb-4 bg-white rounded"  id="container-mare">
+      <div class="row bg-white rounded">
+          <div class="col">
+              <nav class="navbar navbar-expand-md">
+                  <a style="width: 60%; height: auto; padding: 20px;" href="#" class="navbar-brand">
+                    <img class="img-fluid" src="Images/logo.png" alt="logo">
+                  </a>
+                  <button class="custom-toggler navbar-toggler bg-inverse" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="custom-toggler navbar-toggler-icon"></span>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                      <ul class="navbar-nav d-md-none">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li> 
+                        </ul>
+                  </div>
+              </nav>
+          </div>
+      </div>
+
+
+      <div class="bg-light row" style="padding: 0;">
+        <div class="col-md-8 d-flex align-self-stretch" id="prima-coloana">
+          <div class="container bg-white mt-sm-4" id="container-shadow">
+            <div class="row"   id="a-doua-coloana">
+              <div class="col text-center">
+                <p class="text-primary" id="text-principal">FILE A TAX EXTENSION IN MINUTES</p>
+              </div>
+            </div>
+            <div class="row p-4" id="row">
+                <div class="col-4 d-none d-md-block text-center text-muted">
+                    <img class="rounded-circle p-2" src="Images/icon-email.png" alt="email" style="border: 2px solid rgb(18, 49, 108)">
+                    <p class="pt-2"><small>
+                        Get a 6-month tax extension in just 5 minutes.
+                      </small></p>
+                </div>
+                <div class="col-4 d-none d-md-block text-center text-muted">
+                    <img class="rounded-circle p-2" src="Images/icon-oameni.png" alt="people" style="border: 2px solid rgb(18, 49, 108)">
+                    <p class="pt-2"><small>
+                        Anyone can extend the IRS doesn't ask you for a reason.
+                      </small></p>
+                </div>
+                <div class="col-4 d-none d-md-block text-center text-muted">
+                    <img class="rounded-circle p-2" src="Images/icon-email.png" alt="email" style="border: 2px solid rgb(18, 49, 108)">
+                    <p class="pt-2"><small>
+                      Receive an email confirmation once your extension is IRS-approved.
+                    </small></p>
+                </div>
+            </div>
+            <div class="row pt-4" id="a-treia-coloana">
+                <div class="col-md-6 text-center text-muted">
+                    <p class="mt-md-4 mt-2"><small>
+                      Individuals and Families Includes all 1040 individuals, 
+                      1099 contractors, single members LLCs and Schedule C Sole Proprietors.
+                    </small></p>
+                    <button class="mt-4 mb-3 btn custom-button" 
+                      style="background-color: rgb(42,114,175); ">
+                        <small>Personal Extension</small>
+                    </button>
+  
+                </div>
+                <div class="col-md-6 text-center text-muted">
+                    <p class="mt-md-4 mt-2"><small>
+                        Businesses of All Types Includes certain corporations, multi-member LLCs, estates,
+                        trusts and more. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      </small></p>
+                        <button class="mt-4 mb-3 btn custom-button"
+                          style="background-color: rgb(22,53,108);">
+                          <small>Business Extension</small>
+                        </button>
+        
+                </div>
+            </div>
+          </div>
         </div>
-    </div>
+        <div class="col-md-4 d-flex align-self-stretch" id="coloana-login" style="max-width: 100%;">
+            <div class="container bg-white shadow-sm p-4 bg-white" id="login" style="border-radius: 5px">
+                <div class="row">
+                    <div class="col text-center">
+                      <p class="text-danger" id="text-login">ALREADY HAVE AN ACCOUNT?<br>LOGIN HERE:</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <form class="form-group" action="/action_page.php" style="width: 100%; padding: 15px;">
+                      <div class="form-group text-muted">
+                        <div class="row text-right small">
+                          <div class="col-4 text-right">
+                            <label class="label"for="email"  class="float-left">Email address:</label>
+                          </div>
+                          <div class="col-8">
+                            <input type="email" class="form-control float-left" id="email">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group text-muted ">
+                          <div class="row text-right small">
+                              <div class="col-4 text-right">
+                                <label class="label" for="pwd" class="float-left mt-2">Password:</label>
+                              </div>
+                              <div class="col-8">
+                                <input type="password" class="form-control float-left mt-2" id="pwd">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group form-check d-none d-md-inline text-muted" style="width: 50%;">
+                        <label class="form-check-label">
+                          <input class="form-check-input float-left" type="checkbox"> <small>Remember me</small>
+                        </label>
+                      </div>
+                      <button id="login-button" type="submit" class="btn btn-danger">LOGIN</button>
+                      <a href="#" id="forgot-password">Forgot password</a>
+                    </form>
+                </div>
+                <div class="row text-center">
+                  <div class="col text-muted">
+                    <p><small>Are you on Facebook? <br> Use Facebook Connect to skip account creation.</small></p>
+                    <button class="bg-white btn custom-button"><img style="width: 100%; height: auto; padding: 0;" src="Images/connect-to-facebook.png" alt="facebook"></button>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="row bg-white rounded" id="last-row">
+          <div class="col-md-8" id="last-column1" style="padding: 10px; width: 100%;">
+              <img class="img" src="Images/mcafee.png" alt="mcafee" id="img1">
+              <img class="img" src="Images/secured.png" alt="secured" id="img2">
+              <img class="img" src="Images/authorize.png" alt="authorize" id="img3">
+              <img class="img" src="Images/authorized.png" alt="authorized" id="img4">
+              <img class="img" src="Images/bbb.png" alt="bbb" id="img5">
+          </div>
+          <div class="col-md-4" id="last-column2">
+            <div class="row">
+                <div class="col-1 mic d-none d-md-block">
+                    <a href="#">Support</a>
+                </div>
+                <div class="col-4 mic d-none d-md-block">
+                    <a href="#">Send Us Feedback</a>
+                </div>
+                <div class="col-3 mic d-none d-md-block">
+                    <a href="#">Refund Policy</a>
+                </div>
+                <div class="col-4 mic d-none d-md-block">
+                    <a href="#">Licence Agreement</a>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col text-muted small" id="copyright">
+                  <p>Copyright &copy; 2015. All rights reserved</p>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+  
 </body>
 </html>
